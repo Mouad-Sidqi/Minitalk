@@ -6,7 +6,7 @@
 /*   By: msidqi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/03 04:19:31 by msidqi            #+#    #+#             */
-/*   Updated: 2019/02/03 08:46:02 by msidqi           ###   ########.fr       */
+/*   Updated: 2019/02/03 09:26:58 by msidqi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_translate(char **argv, int pid)
 		j = 128;
 		while (argv[2][i] >= 0 && j)
 		{
-			usleep(100);
+			usleep(1000);
 			(argv[2][i] / j) ? kill(pid, 30) : kill(pid, 31);
 			(argv[2][i] / j) ? argv[2][i] -= j : 0;
 			j /= 2;
